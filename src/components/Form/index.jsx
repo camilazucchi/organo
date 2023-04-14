@@ -28,18 +28,18 @@ const Form = (props) => {
   return (
     <section className="form">
       <form onSubmit={aoSalvar}>
-        <h2>Preencha os dados para criar o card do colaborador.</h2>
+        <h2>Preencha os dados para criar o card do seu time.</h2>
         <CampoTexto
           mandatory={true}
           label="Nome"
-          placeholder="Digite seu nome"
+          placeholder="Digite o nome do campeão"
           value={nome}
           aoAlterar={(value) => setNome(value)}
         />
         <CampoTexto
           mandatory={true}
-          label="Cargo"
-          placeholder="Digite seu cargo"
+          label="Custo"
+          placeholder="Digite o custo do campeão"
           value={cargo}
           aoAlterar={(value) => setCargo(value)}
         />
@@ -51,7 +51,7 @@ const Form = (props) => {
         />
         <ListaSuspensa
           mandatory={true}
-          label="Time"
+          label="Sinergia"
           itens={props.times}
           value={time}
           aoAlterar={(value) => setTime(value)}

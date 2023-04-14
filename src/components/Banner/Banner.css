@@ -1,8 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
 .banner {
-  background-color: #6278f7;
-  text-align: center;
+  align-items: center;
+  background-color: rgb(11, 11, 12);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .banner img {
-    max-width: 100%;
+  max-width: 20%;
+}
+
+.banner-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Prata", serif;
+  color: #f6f6f6;
+  margin: 50px 0;
+  font-weight: 300;
 }

@@ -2,12 +2,12 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <header className="banner">
-      <img
-        src="/images/banner.png"
-        alt="Banner principal da página do Organo"
-      ></img>
-    </header>
+    <>
+      <header className="banner">
+        <img src="/images/logo-tft-2.png" alt="Logo do TFT"></img>
+      </header>
+      <h1 className="banner-text">Planeje sua equipe!</h1>
+    </>
   );
 };
 

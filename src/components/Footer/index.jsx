@@ -14,7 +14,7 @@ const Footer = () => {
           <img className="icons" src="/images/ig.png" alt="Logo do Instagram" />
         </a>
       </div>
-      <img className="logo" src="/images/logo.png" alt="Logo do Organo"></img>
+      <img className="logo" src="/images/logo-tft.png" alt="Logo do Organo"></img>
       <p>Desenvolvido por Camila Zucchi.</p>
     </footer>
   );

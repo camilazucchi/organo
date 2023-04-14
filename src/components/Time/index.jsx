@@ -20,7 +20,7 @@ const Time = (props) => {
     </section>
   ) : (
     // desafio: adicionar tal componente se tiver vazio!
-    ""
+    <></>
   );
 };
 
