@@ -20,3 +20,16 @@
 .campo-texto input:focus {
     outline: none;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .campo-texto input {
+    font-size: 14px;
+    text-align: center;
+    height: 60px;
+
+  }
+
+  .campo-texto label {
+    font-size: 14px;
+  }
+}

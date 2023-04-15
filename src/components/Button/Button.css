@@ -1,15 +1,25 @@
 .button {
-  background-color: #6662D5;
+  align-items: center;
+  background-color: #6662d5;
   border-radius: 10px;
   border: none;
   color: #ffffff;
   cursor: pointer;
+  display: flex;
   font-size: 18px;
   font-weight: 600;
+  justify-content: center;
   margin: 32px 0;
-  padding: 28px;
+  padding: 30px;
 }
 
 .button:hover {
-  background-color: #0B0B0C;
+  background-color: #0b0b0c;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .button {
+    height: 60px;
+    font-size: 14px;
+  }
 }
