@@ -1,27 +1,28 @@
 import Colaborador from "../Colaborador";
 import "./Time.css";
 
-const Time = (props) => {
-  return props.colaboradores.length > 0 ? (
-    <section className="time" style={{ backgroundColor: props.corSecundaria }}>
-      <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
+const Time = ({ colaboradores, corPrimaria, corSecundaria, nome, aoDeletar }) => {
+  if (colaboradores.length === 0) {
+    return null;
+  }
+  
+  return (
+    <section className="time" style={{ backgroundColor: corSecundaria }}>
+      <h3 style={{ borderColor: corPrimaria }}>{nome}</h3>
       <div className="colaboradores">
-        {props.colaboradores.map((colaborador) => (
+        {colaboradores.map((colaborador) => (
           <Colaborador
-            corNome={props.corPrimaria}
-            corDeFundo={props.corPrimaria}
-            key={colaborador.nome}
-            nome={colaborador.nome}
-            cargo={colaborador.cargo}
-            imagem={colaborador.imagem}
-          />
+              corNome={corPrimaria}
+              corDeFundo={corPrimaria}
+              key={colaborador.nome}
+              nome={colaborador.nome}
+              cargo={colaborador.cargo}
+              imagem={colaborador.imagem}
+              aoDeletar={aoDeletar}
+            />
         ))}
       </div>
     </section>
-  ) : (
-    // desafio: adicionar tal componente se tiver vazio!
-    <></>
   );
-};
-
+  };
 export default Time;
