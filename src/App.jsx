@@ -121,31 +121,34 @@ function App() {
       nome: "Anima Squad",
       corPrimaria: "#bc2847",
       corSecundaria: "#ff7d87",
-    }
+    },
   ];
 
   const [colaboradores, setColaboradores] = useState([]);
+
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    //console.log(colaborador);
-    setColaboradores([...colaboradores, colaborador]);
+    setColaboradores((prevState) => [...prevState, colaborador]);
   };
+
+  function deletarColaborador() {
+    console.log("deleting colaborador");
+  }
 
   return (
     <div>
       <Banner />
       <Form
-        times={times.map((time) => time.nome)}
-        aoColaboradorCadastrado={(colaborador) =>
-          aoNovoColaboradorAdicionado(colaborador)
-        }
+        times={times.map(({ nome }) => nome)}
+        aoColaboradorCadastrado={aoNovoColaboradorAdicionado}
       />
-      {times.map((time) => (
+      {times.map(({ nome, corPrimaria, corSecundaria }) => (
         <Time
-          key={time.nome}
-          nome={time.nome}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
-          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+          nome={nome}
+          key={nome}
+          corPrimaria={corPrimaria}
+          corSecundaria={corSecundaria}
+          colaboradores={colaboradores.filter(({ time }) => time === nome)}
+          aoDeletar={deletarColaborador}
         />
       ))}
       <Footer />

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
 .colaborador {
+  position: relative;
   width: 280px;
 }
 
@@ -55,4 +56,10 @@
 .cargo-image {
   height: 20px;
   width: 20px;
+}
+
+.deletar {
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }

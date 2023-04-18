@@ -10,11 +10,11 @@ const Time = ({ colaboradores, corPrimaria, corSecundaria, nome, aoDeletar }) =>
     <section className="time" style={{ backgroundColor: corSecundaria }}>
       <h3 style={{ borderColor: corPrimaria }}>{nome}</h3>
       <div className="colaboradores">
-        {colaboradores.map((colaborador) => (
+        {colaboradores.map((colaborador, indice) => (
           <Colaborador
               corNome={corPrimaria}
               corDeFundo={corPrimaria}
-              key={colaborador.nome}
+              key={indice}
               nome={colaborador.nome}
               cargo={colaborador.cargo}
               imagem={colaborador.imagem}
