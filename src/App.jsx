@@ -4,7 +4,7 @@ import Banner from "./components/Banner";
 import Form from "./components/Form";
 import Time from "./components/Time";
 import Footer from "./components/Footer";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [times] = useState([
@@ -154,26 +154,22 @@ function App() {
     setColaboradores((prevState) => [...prevState, colaborador]);
   };
 
-  function deletarColaborador() {
-    console.log("deletando colaborador");
-  }
-
   return (
     <div>
       <Banner />
       <Form
-        times={times.map(time => time.nome)}
+        times={times.map((time) => time.nome)}
         aoColaboradorCadastrado={aoNovoColaboradorAdicionado}
       />
-      {times.map(({ time, nome, corPrimaria, corSecundaria }) => (
+      {times.map(({ time, nome, corPrimaria, corSecundaria, id }) => (
         <Time
+          id={uuidv4}
           nome={nome}
           key={nome}
           time={time}
           corPrimaria={corPrimaria}
           corSecundaria={corSecundaria}
           colaboradores={colaboradores.filter(({ time }) => time === nome)}
-          aoDeletar={deletarColaborador}
         />
       ))}
       <Footer />
