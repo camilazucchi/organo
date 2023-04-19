@@ -1,7 +1,7 @@
 import Colaborador from "../Colaborador";
 import "./Time.css";
 
-const Time = ({ colaboradores, corPrimaria, corSecundaria, nome, aoDeletar }) => {
+const Time = ({ nome, colaboradores, corPrimaria, corSecundaria, aoDeletar }) => {
   if (colaboradores.length === 0) {
     return null;
   }
@@ -25,4 +25,5 @@ const Time = ({ colaboradores, corPrimaria, corSecundaria, nome, aoDeletar }) =>
     </section>
   );
   };
+  
 export default Time;
